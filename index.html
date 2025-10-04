@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТО "АвтоМастер"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">СТО <span>АвтоМастер</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#booking">Запись</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button id="loginBtn">Вход</button>
+                    <button id="registerBtn">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Профессиональный ремонт автомобилей</h1>
+            <p>Качественное обслуживание и ремонт вашего автомобиля по доступным ценам</p>
+            <a href="#booking" class="btn">Записаться на сервис</a>
+        </section>
+
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <div class="services">
+                <div class="service">
+                    <i class="icon">🔧</i>
+                    <h3>Техническое обслуживание</h3>
+                    <p>Регулярное ТО, замена масла и фильтров</p>
+                    <div class="price">от 1500 руб.</div>
+                </div>
+                <div class="service">
+                    <i class="icon">🔍</i>
+                    <h3>Диагностика</h3>
+                    <p>Компьютерная диагностика автомобиля</p>
+                    <div class="price">от 1000 руб.</div>
+                </div>
+                <div class="service">
+                    <i class="icon">🚗</i>
+                    <h3>Ремонт двигателя</h3>
+                    <p>Капитальный и текущий ремонт</p>
+                    <div class="price">от 5000 руб.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Запись на услугу</h2>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="client_name">Ваше имя</label>
+                    <input type="text" id="client_name" name="client_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="client_phone">Телефон</label>
+                    <input type="tel" id="client_phone" name="client_phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="car_model">Марка автомобиля</label>
+                    <input type="text" id="car_model" name="car_model" required>
+                </div>
+                <div class="form-group">
+                    <label for="service_type">Услуга</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="">Выберите услугу</option>
+                        <option value="Техническое обслуживание">Техническое обслуживание</option>
+                        <option value="Диагностика">Диагностика</option>
+                        <option value="Ремонт двигателя">Ремонт двигателя</option>
+                        <option value="Шиномонтаж">Шиномонтаж</option>
+                        <option value="Кузовной ремонт">Кузовной ремонт</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="booking_date">Дата</label>
+                    <input type="date" id="booking_date" name="booking_date" required>
+                </div>
+                <button type="submit" class="btn">Записаться</button>
+            </form>
+        </section>
+
+        <section id="reviews">
+            <h2>Отзывы клиентов</h2>
+            <div id="reviewsContainer" class="reviews">
+                <!-- Отзывы загружаются через JavaScript -->
+            </div>
+            <div class="add-review">
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="review_name">Ваше имя</label>
+                        <input type="text" id="review_name" name="review_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review_rating">Оценка</label>
+                        <select id="review_rating" name="review_rating" required>
+                            <option value="5">5 звезд</option>
+                            <option value="4">4 звезды</option>
+                            <option value="3">3 звезды</option>
+                            <option value="2">2 звезды</option>
+                            <option value="1">1 звезда</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review_text">Текст отзыва</label>
+                        <textarea id="review_text" name="review_text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить отзыв</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>О нас</h2>
+            <p>СТО "АвтоМастер" работает с 2010 года. Мы предоставляем качественные услуги по ремонту и обслуживанию автомобилей.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <p><strong>Адрес:</strong> г. Москва, ул. Автозаводская, 25</p>
+                <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                <p><strong>Email:</strong> info@avtomaster.ru</p>
+                <p><strong>Режим работы:</strong> Пн-Пт 9:00-20:00, Сб-Вс 10:00-18:00</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Формы авторизации -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="form-tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="login_email">Email</label>
+                    <input type="email" id="login_email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login_password">Пароль</label>
+                    <input type="password" id="login_password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Войти</button>
+            </form>
+
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="reg_name">Имя</label>
+                    <input type="text" id="reg_name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg_email">Email</label>
+                    <input type="email" id="reg_email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg_phone">Телефон</label>
+                    <input type="tel" id="reg_phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg_password">Пароль</label>
+                    <input type="password" id="reg_password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 СТО "АвтоМастер". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
